@@ -4,14 +4,18 @@
                     <div class="col-md-3">
                         <div class="logo">
                             <a href="{{route('home')}}">
-                                <img src="{{ asset('frontend/img/logo.png') }}" alt="Logo">
+                                <img src="{{ asset('frontend/image/logo.png') }}" alt="Logo">
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="search">
-                            <input type="text" placeholder="Search">
-                            <button><i class="fa fa-search"></i></button>
+
+                            <form action="" method="GET">
+                            <input type="text" placeholder="Search" name="Search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+
                         </div>
                     </div>
                     <div class="col-md-3">

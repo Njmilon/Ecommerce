@@ -5,7 +5,7 @@
         <title>ER shop</title>
 
         <!-- Favicon -->
-        <link href="{{ asset('frontend/img/favicon.ico') }}" rel="icon">
+        <link href="{{ asset('frontend/img/favicon.ico') }}" rel="icon"> 
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
@@ -50,5 +50,49 @@
         
         <!-- Main Javascript -->
         <script src="{{ asset('frontend/js/main.js') }}"></script>
+
+        
+          
+                
+              </div>
+            </div>
+          </div>
+
+
+         
+
+
+
+
+        
+
+
+      
+
+
+
+
+
+
+
+
+
+       
+
+
+
+      }
+
+       
+
+    })
+ 
+}
+
+
+
+
+</script>
+
     </body>
 </html>

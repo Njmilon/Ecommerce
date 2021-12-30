@@ -7,21 +7,26 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\IndexImg;
+use App\Models\Slider;
 
 class IndexController extends Controller
 {
     public function index(){
 
         $products=Product::where('recent',1)->get(); 
-        $featured=Product::where('featured',1)->get();
+        $featured=Product::where('featured',1)->get(); 
         $categories=Category::all();
-        return view('frontend.index',compact('products','categories','featured'));
+        $frontendSliders=Slider::all();       
+        $upperImages=IndexImg::where('upperImg',1)->latest()->take(2)->get(); 
+        $middleImages=IndexImg::where('middleImg',1)->latest()->take(8)->get();
+        return view('frontend.index',compact('products','categories','featured','frontendSliders','upperImages','middleImages'));
         
     }
 
     public function checkout(){
 
-        return view('frontend.all_bills.checkout');
+        return view('frontend.all_bills.checkout'); 
 
 
     }
@@ -39,10 +44,14 @@ class IndexController extends Controller
         return view('frontend.products.cat_wise_product',compact('catwiseProduct'));
     }
 
-    public function cart(){
+   
 
-        return view('frontend.all_bills.cart');
-    }
+     
+
+  
+
+
+
 
 
 }

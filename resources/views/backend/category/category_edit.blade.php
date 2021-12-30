@@ -13,9 +13,7 @@
 
   <div class="form-group">
     <label for="exampleInputPassword1">Category Description</label>
-     <textarea name="category_description"  class="form-control" name="" id="" cols="10" rows="7">
-        {{ $catedit->description }}
-     </textarea>
+     <textarea name="category_description"  class="form-control" name="" id="" cols="10" rows="7">{{ $catedit->description }}</textarea>
   </div>
   <br>
   <button type="submit" class="btn btn-primary">Update</button>

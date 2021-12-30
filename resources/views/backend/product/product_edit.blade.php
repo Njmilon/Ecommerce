@@ -10,7 +10,7 @@
 
   <div class="form-group">
     <label for="exampleInputEmail1">Product Name</label>
-    <input type="text" name="category_name" value="{{ $productedit->name }}" class="form-control" id="exampleInputEmail1" placeholder="product name">
+    <input type="text" name="product_name" value="{{ $productedit->name }}" class="form-control" id="exampleInputEmail1" placeholder="product name">
     
   </div>
 

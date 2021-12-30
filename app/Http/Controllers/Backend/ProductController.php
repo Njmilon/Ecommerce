@@ -63,8 +63,10 @@ class ProductController extends Controller
     }
 
     public function ProductUpdate(Request $request,$id){
+        
 
         Product::findOrFail($id)->update([
+            
             'name' => $request->product_name,
             'price' => $request->product_price,
             'description' => $request->product_description,
@@ -82,5 +84,7 @@ class ProductController extends Controller
     
        }
 
+       
+      
    
 }

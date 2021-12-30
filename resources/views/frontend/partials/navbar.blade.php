@@ -11,7 +11,7 @@
                             <a href="{{ route('home') }}" class="nav-item nav-link ">Home</a>
                             <a href="{{route('products.view')}}" class="nav-item nav-link">Products</a>
                             <!--<a href="product_details" class="nav-item nav-link">Product Details</a> -->
-                            <a href="{{ route('cart') }} " class="nav-item nav-link">Cart</a>
+                            <a href="{{ route('cart') }}" class="nav-item nav-link">Cart</a>
                             <a href="{{route('checkout')}}" class="nav-item nav-link">Checkout</a>
                             <a href="{{ route('account.details') }}" class="nav-item nav-link">My Account</a>
                             <a href="{{route('wishlist')}}" class="nav-item nav-link">Wishlist</a>

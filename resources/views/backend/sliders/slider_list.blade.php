@@ -35,17 +35,17 @@
                     <!-- {{ $key + 1 }}-->
                     <td scope="row">{{ $loop->iteration }}</td>
                     <td>
-                        <img src="{{ url('uploads/' . $product->image) }}" width="100px" alt="slider image">
+                        <img src="{{ url('uploads/'.$slider->image) }}" width="100px" height="100px"alt="slider image">
                     </td>
                     <td>{{ $slider->title }}</td>
                     <td>{{ $slider->button_text }}</td>
                     <td>{{ $slider->priority }}</td>
                     <td>
-                        <a href="{{ route('slider.edit', $slider->id) }}" class="btn btn-info" title="Slider Data">
+                        <a href="#" class="btn btn-info" title="Slider Data">
                             Edit</a>
 
                         <a onclick="return confirm('Are you sure you want to delete this item?');"
-                            href="{{ route('slider.delete', $slider->id) }}" class="btn btn-danger"
+                            href="#" class="btn btn-danger"
                             title="Delete slider">Delete</a>
 
                     </td>
@@ -72,36 +72,35 @@
                 <div class="modal-body">
 
 
-                    <form action="#" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('slider.post') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-
-                </div>
-
+                        
                 <div class="form-group">
-                    <label for="productName">Slider Title:</label>
+                    <label for="productName"><strong>Slider Title:</strong></label>
                     <input required type="text" class="form-control" id="productName" name="title"
                         placeholder="Enter Product Name">
 
                 </div>
                 <div class="form-group">
-                    <label for="productPrice">Slider Text:</label>
-                    <input required type="text" class="form-control" id="productPrice" name="slider_text"
+                    <label for="productPrice"><strong>Slider Text:</strong></label>
+                    <input type="text" class="form-control" id="productPrice" name="slider_text"
                         placeholder="Enter Product Price">
                 </div>
                 <div class="form-group">
-                    <label for="productPrice">Priority:</label>
-                    <input required type="number" class="form-control" id="productPrice" name="priority"
-                        placeholder="Enter Product Price">
+                    <label for="productPriority"><strong>Priority:</strong></label>
+                    <input type="number" class="form-control" id="productPriority" name="priority"
+                        placeholder="Enter Product Priority">
                 </div>
 
                 <div class="form-group">
-                    <label for="slider_image">Image:</label>
+                    <label for="slider_image"><strong>Image:</strong></label>
                     <input required type="file" class="form-control" id="slider_image" name="slider_image">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+            </div>
                 </form>
 
             </div>

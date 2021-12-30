@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-use App\Http\Controllers\Backend\FeatureProductController;
+
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

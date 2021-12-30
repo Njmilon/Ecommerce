@@ -66,6 +66,13 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link active" href="{{route('image.list')}}">
+                    <span data-feather="users"></span> 
+                    Index Images
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link active" href="#">
                     <span data-feather="bar-chart-2"></span>
                     Reports
